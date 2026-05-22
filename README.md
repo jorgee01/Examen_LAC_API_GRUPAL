@@ -39,15 +39,17 @@ python manage.py createsuperuser
 # 7. Correr el servidor
 python manage.py runserver
 ```
-## Setup en Windows 
-#1. Clonar el repositorio
+## Setup en Windows
+
+```bash
+# 1. Clonar el repositorio
 git clone <repo-url>
 cd proyecto
 
-#2. Crear entorno virtual
+# 2. Crear entorno virtual
 python -m venv venv
 
-#3. Activar entorno virtual (PowerShell)
+# 3. Activar entorno virtual (PowerShell)
 venv\Scripts\activate
 
 # Si usas CMD:
@@ -74,6 +76,7 @@ python manage.py createsuperuser
 
 # 8. Ejecutar servidor
 python manage.py runserver
+```
 
 ## Endpoints
 
