@@ -18,7 +18,7 @@ class EvidenciaProyectoViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         if getattr(self, 'swagger_fake_view', False):
-            return EvidenciaProyecto.objects.none()
+            return EvidenciaProyecto.objects.none() 
         return EvidenciaProyecto.objects.filter(autor=self.request.user)
 
     def create(self, request, *args, **kwargs):

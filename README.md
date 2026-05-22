@@ -1,3 +1,5 @@
+# Integrantes
+#Jorge Murillo, Alonso Estrada, Junior Jiménez, Isaac Vega
 # Evidencias API
 
 API REST para gestión de evidencias de proyectos con autenticación Google OAuth + JWT y almacenamiento de archivos en Cloudinary.
@@ -37,6 +39,41 @@ python manage.py createsuperuser
 # 7. Correr el servidor
 python manage.py runserver
 ```
+## Setup en Windows 
+#1. Clonar el repositorio
+git clone <repo-url>
+cd proyecto
+
+#2. Crear entorno virtual
+python -m venv venv
+
+#3. Activar entorno virtual (PowerShell)
+venv\Scripts\activate
+
+# Si usas CMD:
+# venv\Scripts\activate.bat
+
+# 4. Instalar dependencias
+pip install -r requirements.txt
+
+# 5. Configurar variables de entorno
+copy .env.example .env
+
+# Edita el archivo .env con tus credenciales reales:
+# - SECRET_KEY
+# - CLOUDINARY
+# - GOOGLE_CLIENT_ID
+# - JWT
+
+# 6. Ejecutar migraciones
+python manage.py makemigrations
+python manage.py migrate
+
+# 7. Crear superusuario (opcional)
+python manage.py createsuperuser
+
+# 8. Ejecutar servidor
+python manage.py runserver
 
 ## Endpoints
 
@@ -52,7 +89,7 @@ python manage.py runserver
 | DELETE | `/api/evidencias/{id}/` | Eliminar evidencia | JWT |
 | GET | `/swagger/` | Documentación Swagger | No |
 
-## Subir archivo (POST /api/evidencias/)
+## Subir archivo (POST /api/evidencias/
 
 ```
 Content-Type: multipart/form-data
